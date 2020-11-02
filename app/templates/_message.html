@@ -1,0 +1,11 @@
+{% if m.user_id == current_user.id %}
+<div class="message message1">
+
+    <p class="message_body">{{ m.text }} <br><span class="message_info">{{ m.datetime.strftime('%H:%M') }}</span></p>
+</div>
+{% endif %}
+{% if m.user_id != current_user.id%}
+<div class="message message2" >
+   <p class="message_body">{{ m.text }} <br><span class="message_info">{{ m.datetime.strftime('%H:%M') }}</span></p>
+</div>
+{% endif %}

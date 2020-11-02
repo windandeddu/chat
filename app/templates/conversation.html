@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ user.username }}</h2>
+
+<div class="chat" id="chat" class="text-justify">
+    {% for m in messages %}
+    {% include '_message.html' %}
+    {% endfor %}
+</div>
+
+<form action="" method="post">
+    <div>
+        {{ form.hidden_tag() }}
+        <p class="text-justify">{{ form.text(size=30, class="form-control", rows="3", style="width: 450px") }}</p>
+        <p class="text-justify"> {{ form.submit(class="btn btn-primary") }}</p>
+    </div>
+</form>
+
+<script type="text/javascript">
+    var block = document.getElementById("chat");
+    block.scrollTop = block.scrollHeight;
+</script>
+{% endblock %}
