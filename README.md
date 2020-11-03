@@ -18,3 +18,5 @@ then on index page, you can use search to find other users
 and press the button 'send massage', then you will be taken to the chat page
 
 Я использовал Flask, потому что, лучше всего с ним разобрался во время моего самообучения.
+На нём я сделал примитивный интернет магазин, который вы можете увидеть [здесь](https://github.com/windandeddu/eshop).
+В процессе работы столкнулся с трудностью подключения websocket, для мгновенного получения и отправки сообщений, без перезагрузки страницы.
